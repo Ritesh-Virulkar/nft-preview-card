@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --ff-outfit: "Outfit", sans-serif;
+  --fs-p: 1.125rem;
+
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
+
+  --clr-main-bg: hsl(217, 54%, 11%);
+  --clr-card-bg: hsl(216, 50%, 16%);
+  --clr-card-container: hsl(216, 54%, 10%);
+  --clr-container: hsl(215, 56%, 11%);
+  --clr-line: hsl(215, 32%, 27%);
+  --clr-neutral: hsl(0, 0%, 100%);
+  --clr-primary-text: hsl(215, 51%, 70%);
+  --clr-secondary-text: hsl(178, 100%, 50%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* utility classes */
+.clr-neutral {
+  color: var(--clr-neutral);
+}
+.clr-primary-text {
+  color: var(--clr-primary-text);
+}
+.clr-secondary-text {
+  color: var(--clr-secondary-text);
+}
+.clr-line {
+  color: var(--clr-line);
+}
+.fw-300 {
+  font-weight: var(--fw-300);
+}
+.fw-400 {
+  font-weight: var(--fw-400);
+}
+.fw-600 {
+  font-weight: var(--fw-600);
+}
+.mb-1 {
+  margin-bottom: 1.25rem;
+}
+/* main */
+body {
+  background-color: var(--clr-main-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: var(--ff-outfit);
+  font-size: var(--fs-p);
+  transform: scale(0.9);
+}
+.container {
+  padding: 1rem;
+  border-radius: 4rem;
+  background-color: var(--clr-container);
+}
+.card-container {
+  padding: 1.5rem 1rem;
+  background-color: var(--clr-card-container);
+  border-radius: 2rem;
+}
+.nft-card {
+  background-color: var(--clr-card-bg);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  width: 350px;
+}
+
+/* image  */
+
+/*  */
+.img-container {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.nft-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.2s ease;
+  background-color: var(--clr-secondary-text);
+}
+
+.img-container:hover .overlay {
+  opacity: 0.5;
+}
+.img-container:hover .eye-icon {
+  display: block;
+}
+
+.eye-icon {
+  color: white;
+  transition: 0.2s ease;
+  font-size: 20px;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  display: none;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/*  */
+/* .img-container {
+  background-color: var(--clr-secondary-text);
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+}
+.nft-image {
+  display: block;
+  width: 100%;
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.img-container:hover .nft-image {
+  opacity: 0.5;
+} */
+/* currency */
+.currency-title {
+  color: var(--clr-neutral);
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+.currency-title:hover {
+  color: var(--clr-secondary-text);
+}
+.currency-desc {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.currency-desc-text,
+.footer-text {
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+}
+.footer-text {
+  gap: 20px;
+}
+.footer {
+  border-top: 1px solid var(--clr-line);
+  padding-top: 1rem;
+  transition: all 200ms ease;
+}
+.avatar-img {
+  height: 2rem;
+  border: 1px solid var(--clr-neutral);
+  border-radius: 50%;
+  width: 2rem;
+}
+.creator-name:hover {
+  color: var(--clr-secondary-text);
+  cursor: pointer;
+}
+/* attribution text */
+.attribution {
+  position: absolute;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+  color: var(--clr-neutral);
+  padding-top: 1rem;
+}
+.attribution a {
+  color: var(--clr-secondary-text);
+}
